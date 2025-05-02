@@ -1,82 +1,59 @@
-Dokumen ini menjabarkan perencanaan sprint selama proses pengembangan aplikasi Sistem Monitoring Online untuk Anak PAUD dan TK Berbasis Web. Proyek ini dikembangkan menggunakan metodologi Agile dengan pendekatan Scrum, yang dibagi ke dalam 7 sprint terstruktur. Setiap sprint mencakup tujuan spesifik yang diturunkan ke dalam backlog task dengan estimasi effort (dalam satuan story point/hari).
+Berikut ini adalah penjelasan **profesional, mudah dipahami, dan menarik untuk HR atau perekrut teknis** terkait sprint planning dan eksekusi dalam pengembangan aplikasi **Kinder-Grade**, berdasarkan dokumen thesis yang kamu berikan:
 
-🧭 Metodologi
-Metode: Scrum
+---
 
-Durasi Sprint: 1 minggu (7 hari kerja)
+## 📌 **Sprint Implementation Summary – Kinder-Grade Web App**
 
-Satuan Estimasi: Story Point (1 SP ≈ 1 hari kerja)
+Sebagai bagian dari tugas akhir, saya mengembangkan aplikasi web bernama **Kinder-Grade** menggunakan metode **Agile Scrum**, yang dibagi dalam **7 sprint bertahap** selama pengembangan. Fokus proyek ini adalah membangun sistem monitoring pembelajaran anak PAUD & TK berbasis web yang memudahkan guru dan orang tua dalam pelaporan serta komunikasi.
 
-Tools: Microsoft Excel (untuk burndown chart tracking), GitHub, Visual Studio Code
+### 🔧 **Kenapa Metode Scrum?**
 
-📌 Sprint Breakdown
-🔹 Sprint 1 - Login System Implementation
-Tujuan: Membangun fitur login untuk 3 jenis pengguna: admin, guru, dan orang tua.
+Scrum saya pilih karena:
 
-Task Utama:
+* Cocok untuk pengembangan bertahap dan iteratif.
+* Memudahkan dalam adaptasi perubahan kebutuhan fitur.
+* Memberi visibilitas progres proyek secara berkala (melalui burndown chart dan backlog).
 
-Merancang tampilan dan logika login untuk masing-masing role.
+---
 
-Total Estimasi: 11 SP
+## 🧩 **Sprint Breakdown**
 
-🔹 Sprint 2 - Data Entry for User Roles
-Tujuan: Menyediakan antarmuka untuk input data murid, orang tua, guru, dan kelas dari halaman admin.
+| Sprint       | Fokus Fitur                                        | Hasil                                                                                                           |
+| ------------ | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Sprint 1** | Login sistem untuk 3 role (admin, guru, orang tua) | Selesai tanpa hambatan mayor, hanya perlu upgrade Laravel dari versi 8 ke 9                                     |
+| **Sprint 2** | Input data murid, guru, orang tua, kelas           | Selesai, butuh penyesuaian struktur database Laravel                                                            |
+| **Sprint 3** | CRUD data pengguna                                 | Selesai, validasi berhasil, struktur backend stabil                                                             |
+| **Sprint 4** | Input laporan harian, bulanan, semester            | Selesai, ditemukan kendala foto tidak tersimpan, diselesaikan dengan debugging field `file` dan storage Laravel |
+| **Sprint 5** | Edit & delete laporan guru                         | Selesai, hambatan pada update foto berhasil diatasi dengan metode `Storage::put()`                              |
+| **Sprint 6** | Visualisasi laporan dalam bentuk grafik            | Selesai, tantangan utama pada perhitungan agregat data, diatasi dengan query builder Laravel                    |
+| **Sprint 7** | Tampilan orang tua & fitur komentar laporan        | Selesai, bug filter data antar anak berhasil diperbaiki dengan relasi one-to-many antar tabel user & laporan    |
 
-Task Utama:
+---
 
-Form tambah data, validasi input, dan penyimpanan ke database.
+## 📈 **Manajemen Proyek & Tracking**
 
-Total Estimasi: 10 SP
+* **Product Backlog** disusun berdasarkan prioritas user story.
+* **Sprint Backlog** disusun setiap minggu dengan estimasi dan target spesifik.
+* **Burndown Chart** digunakan untuk memantau progress harian & remaining effort.
 
-🔹 Sprint 3 - CRUD Data Management
-Tujuan: Menyediakan kemampuan admin untuk melihat, mengubah, dan menghapus data yang sudah dimasukkan.
+---
 
-Task Utama:
+## 💡 **Value yang Dicapai**
 
-CRUD untuk data murid, guru, orang tua, dan kelas.
+* Fitur disusun dan dieksekusi berdasarkan skenario nyata (admin → guru → orang tua).
+* Proses development mengasah kemampuan teknis (Laravel, CRUD, storage, chart library) sekaligus soft skill (perencanaan sprint, komunikasi fitur).
+* Semua sprint diselesaikan tepat waktu dengan iterasi yang bisa diukur.
 
-Total Estimasi: 11 SP
+---
 
-🔹 Sprint 4 - Laporan Guru
-Tujuan: Membangun fitur input laporan harian, bulanan, dan semester oleh guru.
+## 🧪 **Evaluasi**
 
-Task Utama:
+* Dilakukan pengujian sistem dengan **Unit Testing (Black Box)** untuk tiap fitur.
+* Validasi antarmuka dilakukan berdasarkan prinsip **8 Golden Rules of UI Design**.
+* Pengujian penerimaan sistem oleh pengguna (**User Acceptance Testing**) menunjukkan **tingkat kepuasan pengguna 85%**, dengan dominasi pengguna adalah **orang tua (82.9%)** dan guru (**17.1%**).
 
-Form input laporan dan penyimpanan sesuai format laporan.
+---
 
-Total Estimasi: 12 SP
+## 🏁 **Kesimpulan**
 
-🔹 Sprint 5 - Edit & View Teacher Reports
-Tujuan: Menyediakan fitur bagi guru untuk melihat, mengubah, dan menghapus laporan.
-
-Task Utama:
-
-Implementasi UI/UX dan koneksi backend CRUD untuk laporan.
-
-Total Estimasi: 15 SP
-
-🔹 Sprint 6 - Grafik Laporan
-Tujuan: Menyajikan visualisasi grafik laporan bulanan berdasarkan data yang telah diinput.
-
-Task Utama:
-
-Integrasi chart library (seperti Chart.js) dan filter data berdasarkan bulan.
-
-Total Estimasi: 7 SP
-
-🔹 Sprint 7 - Parental View and Comments
-Tujuan: Memberikan akses kepada orang tua untuk melihat laporan dan memberikan komentar.
-
-Task Utama:
-
-Halaman dashboard orang tua, fitur komentar pada laporan.
-
-Total Estimasi: 13 SP
-
-📈 Burndown Chart
-Setiap sprint mencatat remaining effort harian dan membandingkannya dengan ideal trend untuk mengukur progress dan efektivitas tim.
-
-✅ Status Akhir
-Semua sprint selesai tepat waktu berdasarkan jadwal mingguan yang direncanakan.
-
-Setiap fitur utama berhasil diimplementasikan sesuai scope awal.
+Selama 7 sprint, saya berhasil mengimplementasikan seluruh fitur utama Kinder-Grade sesuai dengan scope dan waktu yang direncanakan. Proyek ini memberi saya pengalaman langsung menerapkan metode Scrum secara end-to-end dan menghadapi tantangan teknis nyata dalam pengembangan web aplikasi edukasi.
