@@ -1,7 +1,3 @@
-Berikut ini adalah penjelasan **profesional, mudah dipahami, dan menarik untuk HR atau perekrut teknis** terkait sprint planning dan eksekusi dalam pengembangan aplikasi **Kinder-Grade**, berdasarkan dokumen thesis yang kamu berikan:
-
----
-
 ## 📌 **Sprint Implementation Summary – Kinder-Grade Web App**
 
 Sebagai bagian dari tugas akhir, saya mengembangkan aplikasi web bernama **Kinder-Grade** menggunakan metode **Agile Scrum**, yang dibagi dalam **7 sprint bertahap** selama pengembangan. Fokus proyek ini adalah membangun sistem monitoring pembelajaran anak PAUD & TK berbasis web yang memudahkan guru dan orang tua dalam pelaporan serta komunikasi.
