@@ -1,4 +1,3 @@
-It seems like I can’t do more advanced data analysis right now. Please try again later.
 # 📊 User Acceptance Testing (UAT) – Kinder-Grade
 
 Evaluasi sistem website **Kinder-Grade** dilakukan menggunakan metode **User Acceptance Testing (UAT)** untuk memastikan sistem memenuhi kebutuhan pengguna.
